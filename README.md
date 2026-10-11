@@ -60,6 +60,6 @@ CHECK_WORKER: ${{ secrets.DOMAIN }}
   run: 'echo "site: https://你的GitHub用户名.github.io/gate/ ..."'
 修改完成后，点击页面右上角的 Commit changes 保存。
 
-3、pages或者hello world搭建cmliu-edgetunnel的节点，把优选的住宅ip链接："https://YOUR_GITHUB_USERNAME.github.io/gate/nodes.txt" 添加进自定义优选IP里。
+3、pages或者hello world搭建cmliu-edgetunnel：https://github.com/cmliu/edgetunnel 的项目，把优选的住宅ip链接："https://YOUR_GITHUB_USERNAME.github.io/gate/nodes.txt" 添加进自定义优选IP里。
 
 
