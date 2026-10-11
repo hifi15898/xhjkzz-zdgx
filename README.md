@@ -1,7 +1,7 @@
 教程：https://blog.imxiaohe.com/2026/10/ipcloudflare.html
 
 1、cm-Workers-CheckSocks5-worker.js搭建cf的hello world，并且添加自定义的域名；
-2、fork小何的仓库：https://github.com/hezhanleiok/gate，并且修改相应的参数；
+2、fork小何的仓库：https://github.com/hezhanleiok/gate ，并且修改相应的参数；
 
 
 修改 vpngate.py 文件（一处）
