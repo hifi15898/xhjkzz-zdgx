@@ -31,6 +31,7 @@ Secret（内容）：填入你在第一步得到的完整检测 Worker 链接（
 
 在仓库中打开 .github/workflows/vpngate.yml，点击右侧铅笔图标进入编辑模式。
 
+
 第 1 处【必改项 - 核心密钥】：
 
 找到 CHECK_WORKER: 大概在35行，修改为调用刚添加的 Secret：
@@ -41,6 +42,10 @@ CHECK_WORKER: "https://你的域名/check?sstp=vpn:vpn@"
 修改后（通过 Secret 安全读取）：
 
 CHECK_WORKER: ${{ secrets.DOMAIN }}
+
+注意：这个域名是cf中部署cm-checksocks的hello world项目的自定义域名。
+
+
 第 2 处【可选项 - 日志站点展示】：
 
 这一步的作用仅仅是在 GitHub Actions 运行完成后的控制台日志尾部打印一行提示信息，改不改完全不影响脚本和节点的自动化抓取运行。如果你希望日志里显示的 URL 对应你自己的 GitHub 账号，大概再71行，可以顺手修改：
@@ -55,6 +60,6 @@ CHECK_WORKER: ${{ secrets.DOMAIN }}
   run: 'echo "site: https://你的GitHub用户名.github.io/gate/ ..."'
 修改完成后，点击页面右上角的 Commit changes 保存。
 
-3、pages或者hello world搭建cmliu-edgetunnel的节点，把优选的住宅ip链接："https://YOUR_GITHUB_USERNAME.github.io/gate/nodes.txt"添加进自定义优选IP里。
+3、pages或者hello world搭建cmliu-edgetunnel的节点，把优选的住宅ip链接："https://YOUR_GITHUB_USERNAME.github.io/gate/nodes.txt" 添加进自定义优选IP里。
 
 
